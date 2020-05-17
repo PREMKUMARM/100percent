@@ -1,0 +1,4 @@
+# start of file
+
+user-agent: magicsearchbot
+allow: /
