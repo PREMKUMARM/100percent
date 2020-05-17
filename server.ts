@@ -61,9 +61,10 @@ app.get('*', (req, res) => {
   res.render('index', { req });
 });
 
-spdy.createServer({
+/* spdy.createServer({
   key: fs.readFileSync('server.key'),
   cert: fs.readFileSync('server.cert')
-}, app).listen(PORT, () => {
+}, app) */
+app.listen(PORT, () => {
   console.log(`Node Express server listening on http://localhost:${PORT}`);
 });
