@@ -51,14 +51,21 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
-    "preload-webpack-plugin": "^3.0.0-beta.3",
+    "preload-webpack-plugin": "^3.0.0-beta.4",
     "protractor": "~5.4.0",
     "script-ext-html-webpack-plugin": "^2.1.4",
     "spdy": "^4.0.2",
     "ts-loader": "^5.2.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3",
+    "typescript": "^3.9.2",
     "webpack-cli": "^3.1.0"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/angular@9.0.14"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }
