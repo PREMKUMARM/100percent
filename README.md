@@ -7,7 +7,14 @@
 
 #### Performance analysis coverage topics
 
-* 1
-* 2
-* 3
-* 4
+* First Contentful Painting
+* First Meaningful Paint
+* Speed Index
+* First CPU Idle
+* Time to Interactive
+* Max Potential First Input Delay
+
+#### Best Practices
+
+* Use HTTP/2 type for resources & server configs
+* Avoid document.write()
