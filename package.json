@@ -31,7 +31,8 @@
     "express": "^4.15.2",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "@bit/bit.envs.compilers.angular": "file:./components/compilers/angular"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.6",

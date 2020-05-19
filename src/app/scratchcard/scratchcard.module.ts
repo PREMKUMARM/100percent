@@ -8,6 +8,7 @@ import { ScratchcardComponent } from './scratchcard.component';
   declarations: [ScratchcardComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [ScratchcardComponent]
 })
 export class ScratchcardModule { }
