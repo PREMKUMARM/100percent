@@ -35,6 +35,14 @@ module.exports = {
         test: /(\\|\/)@angular(\\|\/)core(\\|\/).+\.js$/,
         parser: { system: true },
       },
+      {
+        test: /\.css$/i,
+        use: [
+          // The `injectType`  option can be avoided because it is default behaviour
+          { loader: 'style-loader', options: { injectType: 'singletonStyleTag', attributes: { defer: true } } },
+          'css-loader',
+        ],
+      }
     ]
   },
   plugins: [
