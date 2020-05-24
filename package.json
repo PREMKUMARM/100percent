@@ -11,7 +11,7 @@
     "heroku-postbuild": "npm run build:ssr",
     "compile:server": "webpack --config webpack.server.config.js --progress --colors",
     "serve:ssr": "node dist/server",
-    "build:ssr": "npm run lint && npm run build:client-and-server-bundles && npm run compile:server",
+    "build:ssr": "npm run e2e && npm run lint && npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod --aot --build-optimizer && ng run au-app:server:production --bundleDependencies all"
   },
   "private": true,
