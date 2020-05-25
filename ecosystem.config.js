@@ -1,19 +1,15 @@
 module.exports = {
   apps : [{
+    name: "percent100",
     script: 'dist/server',
-    watch: '.'
-  }],
-
-  deploy : {
-    production : {
-      user : 'SSH_USERNAME',
-      host : 'SSH_HOSTMACHINE',
-      ref  : 'origin/master',
-      repo : 'GIT_REPOSITORY',
-      path : 'DESTINATION_PATH',
-      'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': ''
-    }
-  }
+    watch: '.',
+    env: {
+      NODE_ENV: "development",
+    },
+    env_production: {
+      NODE_ENV: "production",
+    },
+    instances  : 4,
+    exec_mode  : "cluster"
+  }]
 };
