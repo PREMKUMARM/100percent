@@ -26,16 +26,30 @@ import * as spdy from 'spdy';
 
 import * as fs from 'fs';
 
-// Express server
+
+/**
+ * Express server
+ */
 const app = express();
 
-//app.use(cors());
+/**
+ * Enable gzip compression
+ */
 app.use(compression({ level: 6 }));
 
+/**
+ * Server Port
+ */
 const PORT = process.env.PORT || 4000;
+/**
+ * Static Asset folder
+ */
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
+/**
+ * Static server config variable
+ */
 const {AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap} = require('./dist/server/main');
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
